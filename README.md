@@ -1,12 +1,12 @@
 # aframe-workshop
 
 
-[360 images](https://unsplash.com/search/photos/360)
+[aframe-super-shooter-kit](https://github.com/supermedium/aframe-super-shooter-kit)
 
 
 ## branches
 
-- master (start here)
+- master 
 
 - aframe basic
 
@@ -16,3 +16,4 @@
 
 - aframe vr web terminal hacking
 
+- special: aframe-vr-shooter (you are here now)
