@@ -6,7 +6,9 @@
 
 ## branches
 
-- master (start here)
+- dev (you are here now)
+
+- master
 
 - aframe basic
 
@@ -16,3 +18,4 @@
 
 - aframe vr web terminal hacking
 
+- aframe vr shooter
