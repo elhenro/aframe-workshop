@@ -6,9 +6,9 @@
 
 ## branches
 
-- master (start here)
+- master
 
-- aframe basic
+- aframe basic (you are here now)
 
 - aframe oculus go controlls
 
