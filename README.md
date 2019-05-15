@@ -6,11 +6,11 @@
 
 ## branches
 
-- master (start here)
+- master
 
 - aframe basic
 
-- aframe oculus go controlls
+- aframe oculus go controlls (you are here now)
 
 - aframe shared space
 
