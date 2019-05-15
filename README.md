@@ -10,9 +10,10 @@
 
 - aframe basic
 
+- aframe 360 image
+
 - aframe oculus go controlls
 
 - aframe shared space
 
-- aframe vr web terminal hacking
-
+- ???
