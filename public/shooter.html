@@ -3,13 +3,14 @@
   <title>A-Frame Super Shooter Kit - Basic</title>
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="./aframe-super-shooter-kit.min.js"></script>
+   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
   <script>
     /**
      * Click mouse to shoot.
      */
     AFRAME.registerComponent('click-to-shoot', {
       init: function () {
-        document.body.addEventListener('mousedown', () => { this.el.emit('shoot'); });
+        document.body.addEventListener('triggerdown', () => { this.el.emit('shoot'); });
       }
     });
 
@@ -35,6 +36,10 @@
           color.setRGB(1, 0, 0);
           el.components.material.material.color.copy(color);
         });
+        el.addEventListener('triggerdown', () => {
+          color.setRGB(1, 0, 0);
+          el.components.material.material.color.copy(color);
+        });
       }
     });
   </script>
@@ -42,13 +47,17 @@
 
 <body>
   <a-scene background="color: #DADADA">
+    <a-entity oculus-go-controls></a-entity>
     <a-entity id="bulletTemplate" bullet geometry="primitive: sphere; radius: 0.1" material="color: orange"></a-entity>
 
     <a-entity class="target" target="healthPoints: 10" geometry="primitive: box" material="color: teal" position="0 0 -4" hit-handler></a-entity>
 
     <a-entity id="gun" shooter geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.3" material="color: red" click-to-shoot position="0 0 -1"></a-entity>
 
-    <a-camera id="camera" position="-1 0 0" shooter click-to-shoot></a-camera>
+    <!-- <a-camera id="camera" position="-1 0 0" shooter click-to-shoot></a-camera> -->
+        <a-entity movement-controls="fly: true" position="0 0 0">
+      <a-entity camera position="0 1.6 0"></a-entity>
+    </a-entity>
   </a-scene>
 </body>
 </html>

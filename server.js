@@ -1,7 +1,7 @@
 let app, server,
   express = require('express'),
   path = require('path'),
-  host = process.env.HOST || '192.168.0.111' || '127.0.0.1',
+  host = process.env.HOST || '10.51.7.228' || '127.0.0.1',
   port = process.env.PORT || 3000,
   root = path.resolve(__dirname, '.')
 
