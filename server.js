@@ -6,12 +6,17 @@ let app, server,
   root = path.resolve(__dirname, '.')
 
 app = express()
-app.use((req, res, next)=> { console.log(req.url); next() })
-app.use(express.static('public'))
+
+app.use ((req, res, next) => {
+  console.log(req.url); next() 
+})
+
+app.use(
+  express.static('public'))
+
 server = app.listen(port, host, serverStarted)
 
 function serverStarted () {
     console.log('Server started', host, port)
-    console.log('Root directory', root)
-    console.log('Press Ctrl+C to exit...\n')
+    console.log('running server in :', root)
 }
